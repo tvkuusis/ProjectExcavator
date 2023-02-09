@@ -1,13 +1,17 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-public class TouchInput : MonoBehaviour
+public class TouchManager : MonoBehaviour
 {
     public LayerMask physicsLayers;
     public GameObject testObject;
+    [SerializeField] private IObjectController _playerController;
+    [SerializeField] private NavMeshAgent _playerAgent;
+
     
     void OnEnable()
     {
@@ -30,6 +34,8 @@ public class TouchInput : MonoBehaviour
     {
         bool canPlaceHere;
         Vector3 targetPosition;
+
+        if (Touch.activeFingers.Count == 0) return;
         
         Touch activeTouch = Touch.activeFingers[0].currentTouch;
         /*for (var i = 0; i < activeTouches.Count; ++i)
@@ -56,6 +62,7 @@ public class TouchInput : MonoBehaviour
 
         //Set the calculated target position
         targetPosition = hitpoints[index].point;
-        testObject.transform.position = targetPosition;
+        // testObject.transform.position = targetPosition;
+        _playerAgent.SetDestination(targetPosition);
     }
 }

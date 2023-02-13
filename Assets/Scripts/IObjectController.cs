@@ -1,6 +1,6 @@
-using UnityEngine;
+using Helpers;
 
-public interface IObjectController
+public interface IMachineController
 {
-    void Move(Vector3 newPosition);
+    void AttachInteractable(InteractableType type);
 }

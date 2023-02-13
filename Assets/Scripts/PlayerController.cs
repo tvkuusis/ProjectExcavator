@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using Helpers;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IObjectController
+public class PlayerController : MonoBehaviour, IMachineController
 {
-    public void Move(Vector3 newPosition)
+    public void AttachInteractable(InteractableType type)
     {
         throw new System.NotImplementedException();
     }

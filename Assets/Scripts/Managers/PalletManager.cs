@@ -1,14 +1,20 @@
+using Helpers;
 
 namespace Managers
 {
     public class PalletManager : InteractableManager
     {
-        public void PrepareInteractable(IMachineController parent, IInteractable interactable)
+        public void PrepareInteractable(Machine machine, Interactable interactable)
         {
-            throw new System.NotImplementedException();
+            if (interactable.InteractableType != InteractableType.Pallet)
+            {
+                return;
+            }
+            
+            machine.AttachInteractable(interactable);
         }
 
-        public void FinalizeInteractable(IMachineController parent, IInteractable interactable)
+        public void FinalizeInteractable(Machine parent, Interactable interactable)
         {
             throw new System.NotImplementedException();
         }

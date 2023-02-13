@@ -1,8 +1,12 @@
+using Helpers;
 using UnityEngine;
 
-public interface IInteractable
+public class Interactable : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other);
-    void OnTriggerExit(Collider other);
-    void OnDeploy();
+    public InteractableType InteractableType { get; set; }
+
+    public virtual void OnDeploy()
+    {
+        
+    }
 }

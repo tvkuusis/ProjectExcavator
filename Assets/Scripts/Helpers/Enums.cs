@@ -2,5 +2,6 @@ using UnityEngine;
 
 namespace Helpers
 {
-    public enum InteractableType { Pallet, Pile, Count }
+    public enum MachineType  { Forklift, Count }
+    public enum InteractableType { Pallet, Count }
 }

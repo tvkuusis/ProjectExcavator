@@ -1,10 +1,10 @@
-using Helpers;
-using UnityEngine;
-
-public class PlayerController : MonoBehaviour, IMachineController
-{
-    public void AttachInteractable(InteractableType type)
-    {
-        throw new System.NotImplementedException();
-    }
-}
+// using Helpers;
+// using UnityEngine;
+//
+// public class PlayerController : MonoBehaviour, IMachine
+// {
+//     public void AttachInteractable(IInteractable interactable)
+//     {
+//         throw new System.NotImplementedException();
+//     }
+// }

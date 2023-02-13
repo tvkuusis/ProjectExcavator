@@ -3,7 +3,7 @@ namespace Managers
 {
     public interface InteractableManager
     {
-        void PrepareInteractable(IMachineController parent, IInteractable interactable);
-        void FinalizeInteractable(IMachineController parent, IInteractable interactable);
+        void PrepareInteractable(Machine parent, Interactable interactable);
+        void FinalizeInteractable(Machine parent, Interactable interactable);
     }
 }

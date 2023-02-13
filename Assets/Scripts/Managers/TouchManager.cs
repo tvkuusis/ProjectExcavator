@@ -9,7 +9,7 @@ public class TouchManager : MonoBehaviour
 {
     public LayerMask physicsLayers;
     public GameObject testObject;
-    [SerializeField] private IMachineController _playerController;
+    [SerializeField] private Machine _playerController;
     [SerializeField] private NavMeshAgent _playerAgent;
 
     

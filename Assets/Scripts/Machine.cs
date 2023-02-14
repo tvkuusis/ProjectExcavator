@@ -9,18 +9,15 @@ public class Machine : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        Console.WriteLine("Hit collider " + other.transform.name);
-        Interactable i = other.GetComponent<Interactable>();
-        PalletManager pm = new PalletManager();
-        pm.PrepareInteractable(this, i);
+
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    public virtual void AttachInteractable(Interactable interactable)
     {
-        throw new System.NotImplementedException();
+        
     }
     
-    public virtual void AttachInteractable(Interactable interactable)
+    public virtual void DetachInteractable()
     {
         
     }
